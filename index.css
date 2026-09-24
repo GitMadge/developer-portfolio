@@ -1,0 +1,327 @@
+/* Page background: dark space with a blue glow and small stars */
+body {
+  font-family: 'Sora', sans-serif;
+  color: #e6eef6;
+  background-color: #05080f;
+  background-image:
+    radial-gradient(1px 1px at 20px 40px, #ffffff, transparent),
+    radial-gradient(1px 1px at 140px 120px, #a8c5dc, transparent),
+    radial-gradient(1.5px 1.5px at 260px 200px, #ffffff, transparent),
+    radial-gradient(ellipse at 75% 35%, rgba(55, 106, 153, 0.35), transparent 60%);
+  background-size: 300px 300px, 300px 300px, 300px 300px, 100% 100%;
+}
+
+.display-font {
+  font-family: 'Michroma', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background-color: rgba(5, 8, 15, 0.7);
+}
+
+.navbar-brand {
+  letter-spacing: 0.3em;
+}
+
+.nav-link {
+  color: #a8c5dc;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Glass buttons */
+.glass-btn {
+  color: #e6eef6;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 1px solid rgba(168, 197, 220, 0.4);
+  background: linear-gradient(180deg, rgba(168, 197, 220, 0.22), rgba(168, 197, 220, 0.06));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+}
+
+.glass-btn:hover {
+  color: #ffffff;
+  border-color: rgba(168, 197, 220, 0.8);
+}
+
+.glass-btn-solid {
+  background: linear-gradient(180deg, rgba(80, 140, 200, 0.75), rgba(55, 106, 153, 0.9));
+}
+
+/* Landing */
+.landing {
+  padding-top: 140px;
+  padding-bottom: 40px;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: #93acc4;
+}
+
+.greeting {
+  font-size: 22px;
+  font-weight: 300;
+  color: #a8c5dc;
+}
+
+.hero-title {
+  font-size: 48px;
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 0 30px rgba(127, 179, 224, 0.45);
+}
+
+.hero-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #c9d8e6;
+  max-width: 520px;
+}
+
+.stat-number {
+  font-size: 28px;
+  color: #a8c5dc;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: #93acc4;
+}
+
+/* Photo rises into place once when the page loads */
+.hero-photo {
+  max-width: 100%;
+  width: 440px;
+  mask-image: linear-gradient(to bottom, #000 72%, transparent 100%);
+  animation: rise-up 1.8s ease-out;
+}
+
+.hero-photo-glow {
+  filter: drop-shadow(0 0 40px rgba(55, 106, 153, 0.35));
+}
+
+@keyframes rise-up {
+  from {
+    transform: translateY(120px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Shared section styles */
+.section {
+  padding: 80px 0;
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: #a8c5dc;
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(168, 197, 220, 0.25);
+  background-color: rgba(168, 197, 220, 0.06);
+}
+
+.section-title {
+  font-size: 32px;
+  color: #ffffff;
+  margin-top: 16px;
+}
+
+/* Glass card (reused in later sections) */
+.glass-card {
+  padding: 32px;
+  border-radius: 24px;
+  border: 1px solid rgba(168, 197, 220, 0.25);
+  background: linear-gradient(135deg, rgba(168, 197, 220, 0.14), rgba(168, 197, 220, 0.04));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(16px);
+}
+
+/* About */
+.fact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.fact-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(168, 197, 220, 0.15);
+}
+
+.fact-list li:last-child {
+  border-bottom: none;
+}
+
+.fact-label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #93acc4;
+  margin-bottom: 4px;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #c9d8e6;
+}
+
+/* Tools */
+.tool-heading {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.tool-list {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.tool-list li {
+  color: #c9d8e6;
+  padding: 6px 0;
+}
+
+.tool-list li::marker {
+  color: #a8c5dc;
+}
+
+/* Projects */
+.project-card {
+  padding: 18px;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.project-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.project-text {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #c9d8e6;
+}
+
+.chip {
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(168, 197, 220, 0.3);
+  color: #a8c5dc;
+  background-color: rgba(168, 197, 220, 0.06);
+}
+
+.btn-sm-glass {
+  font-size: 13px;
+  padding: 10px 20px;
+}
+
+/* Contact */
+.field-label {
+  font-size: 13px;
+  color: #a8c5dc;
+  margin-bottom: 6px;
+}
+
+.field {
+  width: 100%;
+  font-family: 'Sora', sans-serif;
+  color: #e6eef6;
+  background-color: rgba(168, 197, 220, 0.06);
+  border: 1px solid rgba(168, 197, 220, 0.3);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.field::placeholder {
+  color: #93acc4;
+}
+
+.field:focus {
+  outline: none;
+  border-color: #a8c5dc;
+}
+
+/* Footer */
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid rgba(168, 197, 220, 0.18);
+  font-size: 13px;
+  color: #93acc4;
+}
+
+.footer a {
+  color: #a8c5dc;
+  text-decoration: none;
+}
+
+/* Map */
+.map-card {
+  padding: 12px;
+}
+
+#gmap {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  border: 0;
+  border-radius: 16px;
+  filter: grayscale(0.6) invert(0.9) hue-rotate(180deg);
+}
+
+.icon-link-glass {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: #e6eef6;
+  border-radius: 50%;
+  border: 1px solid rgba(168, 197, 220, 0.4);
+  background: linear-gradient(180deg, rgba(168, 197, 220, 0.22), rgba(168, 197, 220, 0.06));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+
+.icon-link-glass:hover {
+  color: #ffffff;
+  border-color: #a8c5dc;
+}
+
+/* Smaller title on phones */
+@media (max-width: 576px) {
+    .section-title {
+    font-size: 24px;
+  }
+  .hero-title {
+    font-size: 32px;
+  }
+}
